@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">QQHome</string>
+    <string name="AddBuilding_Title">Thêm căn trọ<font color='#FF0000'>*</font></string>
+    <string name="AddBuilding_NameMotel">Tên căn trọ <font color='#FF0000'>*</font></string>
+    <string name="AddBuilding_Floor">Số tầng <font color='#FF0000'>*</font></string>
+    <string name="AddBuilding_Adres">Địa chỉ </string>
+    <string name="AddBuilding_Province">Tỉnh <font color='#FF0000'>*</font></string>
+    <string name="AddBuilding_District">Huyện <font color='#FF0000'>*</font></string>
+    <string name="AddBuilding_SpecificAdres">Địa chỉ cụ thể <font color='#FF0000'>*</font></string>
+    <string name="AddBuilding_Add">Thêm </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="AddService_Name">Tên dịch vụ<font color='#FF0000'>*</font></string>
+    <string name="AddService_Price">Chi phí dịch vụ<font color='#FF0000'>*</font></string>
+    <string name="AddService_Type">Loại dịch vụ<font color='#FF0000'>*</font></string>
+
+
+</resources>

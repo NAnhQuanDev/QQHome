@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/serviceFragment"
+        android:name="com.aqsoft.qqhome.ui.fragment.service.ServiceFragment"
+        android:label="fragment_service"
+        tools:layout="@layout/fragment_service" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.aqsoft.qqhome.ui.fragment.settings.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_settingFragment_to_settingNotificationFragment"
+            app:destination="@id/settingNotificationFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_polictyFragment"
+            app:destination="@id/polictyFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.aqsoft.qqhome.ui.fragment.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_roomManagerFragment"
+            app:destination="@id/roomManagerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_serviceFragment"
+            app:destination="@id/serviceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_billFragment"
+            app:destination="@id/billFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addBuildingFragment"
+            app:destination="@id/addBuildingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/roomManagerFragment"
+        android:name="com.aqsoft.qqhome.ui.fragment.room_manager.RoomManagerFragment"
+        android:label="RoomManagerFragment"
+        tools:layout="@layout/fragment_room_manager">
+        <action
+            android:id="@+id/action_roomManagerFragment_to_detailRoomFragment"
+            app:destination="@id/detailRoomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/billFragment"
+        android:name="com.aqsoft.qqhome.ui.fragment.bill_manager.BillFragment"
+        android:label="fragment_bill"
+        tools:layout="@layout/fragment_bill">
+        <action
+            android:id="@+id/action_billFragment_to_detailBillFragment"
+            app:destination="@id/detailBillFragment" />
+        <action
+            android:id="@+id/action_billFragment_to_finalizeBillFragment"
+            app:destination="@id/finalizeBillFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.aqsoft.qqhome.ui.fragment.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_AddBuildingFragment"
+            app:destination="@id/addBuildingFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addBuildingFragment"
+        android:name="com.aqsoft.qqhome.ui.fragment.add_building.AddBuildingFragment"
+        android:label="AddBuildingFragment"
+        tools:layout="@layout/fragment_add_building">
+        <action
+            android:id="@+id/action_addBuildingFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailRoomFragment"
+        android:name="com.aqsoft.qqhome.ui.fragment.room_detail.DetailRoomFragment"
+        android:label="DetailRoomFragment"
+        tools:layout="@layout/fragment_detail_room">
+        <argument
+            android:name="room"
+            app:argType="com.aqsoft.qqhome.data.entity.Room" />
+        <action
+            android:id="@+id/action_detailRoomFragment_to_updateInfoRoom"
+            app:destination="@id/updateInfoRoom" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingNotificationFragment"
+        android:name="com.aqsoft.qqhome.ui.fragment.notification.settingNotificationFragment"
+        android:label="settingNotificationFragment"
+        tools:layout="@layout/fragment_setting_notification" />
+    <fragment
+        android:id="@+id/polictyFragment"
+        android:name="com.aqsoft.qqhome.ui.fragment.settings.PolicyFragment"
+        android:label="PolictyFragment"
+        tools:layout="@layout/fragment_policy" />
+    <fragment
+        android:id="@+id/updateInfoRoom"
+        android:name="com.aqsoft.qqhome.ui.fragment.room_detail.update_info_room.UpdateInfoRoomFragment"
+        android:label="UpdateInfoRoom"
+        tools:layout="@layout/fragment_update_info_room">
+        <action
+            android:id="@+id/action_updateInfoRoom_to_detailRoomFragment"
+            app:destination="@id/detailRoomFragment"
+            app:popUpTo="@id/detailRoomFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="room"
+            app:argType="com.aqsoft.qqhome.data.entity.Room" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.aqsoft.qqhome.ui.fragment.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/finalizeBillFragment"
+        android:name="com.aqsoft.qqhome.ui.fragment.bill_manager.Finalize_Bill.FinalizeBillFragment"
+        android:label=".FinalizeBillFragment"
+        tools:layout="@layout/fragment_finalize_bill">
+        <argument
+            android:name="roomId"
+            app:argType="integer" />
+        <argument
+            android:name="roomName"
+            app:argType="string" />
+        <argument
+            android:name="roomPrice"
+            app:argType="long" />
+        <argument
+            android:name="selectedMonth"
+            app:argType="integer" />
+        <argument
+            android:name="selectedYear"
+            app:argType="integer" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.aqsoft.qqhome.ui.fragment.feedback.FeedBackFragment"
+        android:label="fragment_feed_back"
+        tools:layout="@layout/fragment_feed_back" />
+    <fragment
+        android:id="@+id/detailBillFragment"
+        android:name="com.aqsoft.qqhome.ui.fragment.bill_manager.Detail_Bill.DetailBillFragment"
+        android:label="DetailBillFragment"
+        tools:layout="@layout/fragment_detail_bill" >
+        <argument
+            android:name="bill"
+            app:argType="com.aqsoft.qqhome.data.entity.Bill" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticsFragment"
+        tools:layout="@layout/fragment_statistics"
+        android:name="com.aqsoft.qqhome.ui.fragment.statistics.StatisticsFragment"
+        android:label="StatisticsFragment" />
+
+</navigation>
