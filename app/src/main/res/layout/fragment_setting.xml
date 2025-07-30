@@ -91,7 +91,7 @@
         android:layout_gravity="right"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:text="Phiên bản 1.1"
+        android:text="Phiên bản 1.9"
         android:textColor="@color/black">
 
     </TextView>
